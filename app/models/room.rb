@@ -16,6 +16,10 @@ class Room < ApplicationRecord
     public_id
   end
 
+  def self.random_id
+    Room.recommended.recommended.first.public_id
+  end
+
   private
 
   def generate_public_id

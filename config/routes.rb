@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   post '/validate_beta_user', to: 'static#validate_beta_user'
   get 'home', to: 'static#index'
 
+  get '/rooms/random', to: redirect { "/rooms/#{Room.random_id}" }
+
   resources :rooms, only: %i[create show] do
     resources :jams, only: :create
   end

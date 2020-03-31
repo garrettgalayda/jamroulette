@@ -10,7 +10,7 @@
         </h2>
 
         <% if(room = Room.recommended.take) %>
-          <%= link_to(room_path(room), class: "button is-primary is-inverted") do %>
+          <%= link_to("/rooms/random", class: "button is-primary is-inverted") do %>
             <span class="icon">
               <i class="fas fa-door-open"></i>
             </span>
